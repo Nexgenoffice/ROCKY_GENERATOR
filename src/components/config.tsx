@@ -88,8 +88,8 @@ export const ACCESSORY_CATEGORIES = {
       {
         id: "m12",
         type: "image",
-        value: "/Mouth/Cigarre.png",
-        label: "Cigarre",
+        value: "/Mouth/cigare.png",
+        label: "Cigare",
       },
       {
         id: "m13",
