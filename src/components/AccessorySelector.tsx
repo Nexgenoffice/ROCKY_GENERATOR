@@ -39,17 +39,17 @@ export default function AccessorySelector({
   };
 
   return (
-    <div className="flex flex-col lg:h-[560px] lg:w-[700px] lg:max-w-auto max-w-[600px] w-[90%] bg-transparent ">
+    <div className="flex flex-col lg:h-[560px] lg:w-[700px] lg:max-w-auto max-w-[600px] w-[90%] bg-transparent">
       <div
-        className="flex flex-col h-full rounded-3xl shadow-2xl border border-[#463832]/50 overflow-hidden"
+        className="flex flex-col h-full rounded-3xl shadow-2xl border border-[#463832]/50 lg:overflow-hidden overflow-visible"
         style={{
           backgroundColor: "rgba(30, 25, 23, 0.7)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
         }}
       >
-        <div className="lg:p-6 p-4 lg:pb-3 pb-2 lg:pt-4 pt-3 border-b border-[#463832]/50 mr-auto">
-          <h2 className="lg:text-2xl text-xl font-bold text-[#D4C5B5]">
+        <div className="lg:p-6 p-4 lg:pb-3 pb-2 lg:pt-4 pt-3 border-b border-[#463832]/50 w-full">
+          <h2 className="lg:text-2xl text-xl font-bold text-[#D4C5B5] text-center">
             Customization
           </h2>
         </div>
@@ -60,9 +60,9 @@ export default function AccessorySelector({
             onValueChange={setActiveTab}
             className="flex-1 flex flex-col"
           >
-            <div className="lg:px-4 px-3">
+            <div className="lg:p-4 p-3">
               <div className="w-full rounded-2xl border border-[#463832] bg-[#2A2320] lg:p-1 p-2 shadow-lg">
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-1 justify-center">
                   {[...mainCategories, ...secondaryCategories].map((cat) => (
                     <button
                       key={cat.id}
@@ -81,10 +81,14 @@ export default function AccessorySelector({
               </div>
             </div>
 
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 lg:overflow-hidden">
               <div
-                className="h-full lg:p-4 p-3 overflow-y-scroll scrollbar-thin scrollbar-thumb-[#8B7355] scrollbar-track-[#2A2320]"
-                style={{ maxHeight: "calc(100vh - 300px)" }}
+                className="h-full lg:p-4 p-3 lg:overflow-y-scroll"
+                style={{ 
+                  maxHeight: "calc(100vh - 300px)",
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "#8B7355 transparent"
+                }}
               >
                 {categories.map((cat) => (
                   <TabsContent key={cat.id} value={cat.id} className="mt-0">

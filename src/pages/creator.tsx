@@ -35,15 +35,15 @@ export default function CharacterCreator() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col lg:justify-center items-center">
+    <div className="h-full w-full flex flex-col lg:justify-center items-center lg:overflow-hidden overflow-y-auto py-5">
       <h1
-        className="font-bold sm:text-6xl text-4xl lg:mb-10 lg:mt-0 mt-10 text-white"
+        className="font-bold sm:text-6xl text-4xl lg:mb-5 lg:mt-0 mt-5 text-white"
         // style={{ fontWeight: "bold", color: "#D4C5B5" }}
       >
         ROCKY'S HEAD <br />
         GENERATOR
       </h1>
-      <div className="flex lg:flex-row lg:flex-wrap flex-col items-center lg:mt-0 mt-10 lg:justify-center overflow-hidden max-w-7xl mx-auto lg:gap-5 lg:px-5">
+      <div className="flex lg:flex-row lg:flex-wrap flex-col items-center lg:mt-0 mt-5 lg:justify-center lg:overflow-hidden max-w-7xl mx-auto lg:gap-5 lg:px-5 pb-10">
         {/* Left Side - Canvas */}
 
         <CharacterCanvas
