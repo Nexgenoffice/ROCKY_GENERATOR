@@ -36,6 +36,7 @@ export const ACCESSORY_CATEGORIES = {
       { id: "e14", type: "image", value: "/eyes/punk.png", label: "Punk" },
       { id: "e15", type: "image", value: "/eyes/red.png", label: "Red" },
       { id: "e16", type: "image", value: "/eyes/ruby.png", label: "Ruby" },
+      { id: "e17", type: "image", value: "/eyes/def.png", label: "Def" },
     ],
   },
   mouth: {
