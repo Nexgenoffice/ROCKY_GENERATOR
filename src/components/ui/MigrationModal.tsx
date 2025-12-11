@@ -1,23 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-interface Props {
-  open: boolean;
-  onClose: () => void;
-}
+interface Props {}
 
-const MigrationModal: React.FC<Props> = ({ open, onClose }) => {
-  if (!open) return null;
+const MigrationModal: React.FC<Props> = () => {
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
+  // Modal stays open at all times; no key listeners to close it.
 
   return (
     <div
@@ -29,7 +16,6 @@ const MigrationModal: React.FC<Props> = ({ open, onClose }) => {
       <div
         className="absolute inset-0 bg-black/45"
         style={{ backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}
-        onClick={onClose}
       />
 
       {/* Modal Box */}
@@ -59,7 +45,6 @@ const MigrationModal: React.FC<Props> = ({ open, onClose }) => {
             href="https://rockyshead.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => onClose()}
             className="inline-block px-6 py-2 rounded-md text-white font-semibold gaegu text-center"
             style={{
               background: "linear-gradient(180deg, #8B7355 0%, #A68A6D 100%)",

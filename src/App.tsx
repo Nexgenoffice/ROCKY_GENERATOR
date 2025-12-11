@@ -1,10 +1,9 @@
 import "./App.css";
 import Creator from "./pages/creator";
 import MigrationModal from "./components/ui/MigrationModal";
-import { useState } from "react";
 
 function App() {
-  const [showMigrationModal, setShowMigrationModal] = useState(true);
+  // Modal is persistent: we don't track a close state
 
   return (
     <div
@@ -26,13 +25,13 @@ function App() {
         flexDirection: "column",
       }}
     >
-      <MigrationModal open={showMigrationModal} onClose={() => setShowMigrationModal(false)} />
+      <MigrationModal />
       <div
         style={{
           display: "flex",
           width: "100%",
         }}
-        className={`min-h-screen ${showMigrationModal ? "blur-sm" : ""}`}
+        className="min-h-screen blur-sm"
       >
         <Creator />
       </div>
