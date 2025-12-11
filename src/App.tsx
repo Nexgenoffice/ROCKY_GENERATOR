@@ -1,7 +1,11 @@
 import "./App.css";
 import Creator from "./pages/creator";
+import MigrationModal from "./components/ui/MigrationModal";
+import { useState } from "react";
 
 function App() {
+  const [showMigrationModal, setShowMigrationModal] = useState(true);
+
   return (
     <div
       className="lg:fixed relative"
@@ -22,12 +26,13 @@ function App() {
         flexDirection: "column",
       }}
     >
+      <MigrationModal open={showMigrationModal} onClose={() => setShowMigrationModal(false)} />
       <div
         style={{
           display: "flex",
           width: "100%",
         }}
-        className="min-h-screen"
+        className={`min-h-screen ${showMigrationModal ? "blur-sm" : ""}`}
       >
         <Creator />
       </div>

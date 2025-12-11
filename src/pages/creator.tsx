@@ -13,6 +13,7 @@ export default function CharacterCreator() {
     acc2: null,
     background: null,
   });
+  
 
   const handleSelect = (category: string, id: string | null) => {
     setSelectedAccessories((prev) => ({
@@ -35,7 +36,7 @@ export default function CharacterCreator() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col lg:justify-center items-center lg:overflow-hidden overflow-y-auto py-5">
+    <div className={`h-full w-full flex flex-col lg:justify-center items-center lg:overflow-hidden overflow-y-auto py-5`}>
       <h1
         className="font-bold sm:text-6xl text-4xl lg:mb-5 lg:mt-0 mt-5"
         style={{ color: "#D4C5B5" }}
@@ -55,7 +56,7 @@ export default function CharacterCreator() {
           selectedAccessories={selectedAccessories}
           onSelect={handleSelect}
         />
-      </div>{" "}
+      </div>
     </div>
   );
 }

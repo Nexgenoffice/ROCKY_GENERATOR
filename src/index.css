@@ -38,6 +38,10 @@
   body {
     position: relative;
   }
+
+  .gaegu {
+    font-family: 'Gaegu', system-ui, sans-serif;
+  }
   
   /* Force les bonnes dimensions */
   .w-screen, .min-w-full {
